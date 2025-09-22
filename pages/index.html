@@ -5,46 +5,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="nav">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="practice.html">Практики</a></li>
-          <li><a href="goods.html">Продукты</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+        <ul class="nav_list">
+          <li class="nav_item">
+            <a class="nav-link" href="index.html">Главная</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-link" href="news.html">Новости</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-link" href="practice.html">Практики</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-link" href="goods.html">Продукты</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav-link" href="contacts.html">Контакты</a>
+          </li>
         </ul>
       </div>
     </header>
     <main>
       <div class="content">
-        <p>Информация об авторе</p>
+        <h1 class="profile-header">Информация об авторе</h1>
         <img
+          class="profile-photo"
           src="../assets/my_photo.jpg"
           alt="Фото автора"
           width="200"
           height="250"
         />
-        <p>Харций Полина Игоревна</p>
-        <p>ЭФБО-16-24</p>
-        <p>
+        <p class="profile-name">Харций Полина Игоревна</p>
+        <p class="profile-group">ЭФБО-16-24</p>
+        <p class="about-me">
           Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано
           ударила в голову. В четыре активно ругался. Потом школа, форма, драки,
           клей. Так я становился сильней. Воровал деньги в раздевалке.
         </p>
+        <ul>
+          <li>Навык 1</li>
+          <li>Навык 1</li>
+          <li>Навык 1</li>
+          <li>Навык 1</li>
+        </ul>
       </div>
       <div class="expirience">
-        <div class="first_exp">
-          <p>Работа волшебником</p>
+        <div class="exp">
+          <h1>Работа волшебником</h1>
           <p>
             Обучилась в хогвартсе и работала на пол ставки преподавателем там,
             можно сказать круто получалось. Спасибо за внимание
           </p>
         </div>
-        <div class="sec_exp">
-          <p>Работа в МИРЭА</p>
+        <div class="exp">
+          <h1>Работа в МИРЭА</h1>
           <p>
             Вообще классный эксприенс, учусь и работаю в одном месте, только
             волшебной палочкой нельзя пользоваться, перед маглами спалиться
@@ -53,6 +71,8 @@
         </div>
       </div>
     </main>
-    <footer>Подвал</footer>
+    <footer>
+      <p>footer</p>
+    </footer>
   </body>
 </html>
