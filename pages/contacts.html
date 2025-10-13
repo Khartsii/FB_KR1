@@ -4,37 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
-    <header>
-      <div class="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a class="nav-link" href="index.html">Главная</a>
+    <div class="page-container">
+      <header class="header">
+        <!-- Было: <div class="header"> -->
+        <h1>Хэдер</h1>
+        <!-- Добавили заголовок для семантики -->
+      </header>
+      <nav class="nav">
+        <!-- Было: <div class="nav"> -->
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/index.html">Главная</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="news.html">Новости</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/news.html">Новости</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="practice.html">Практики</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/practice.html">Практики</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="goods.html">Продукты</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/goods.html">Товары</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-    </header>
-    <main>
-      <div class="contacts">
-        <p>mail@mail.ru</p>
-        <p>Адрес</p>
-        <button>Позвоните мне</button>
-      </div>
-    </main>
-    <footer>Подвал</footer>
+      </nav>
+      <main class="main-contacts">
+        <section class="about-me">
+          <!-- Было: <div class="about-me"> -->
+          <h2>Связь со мной</h2>
+          <!-- Добавили заголовок для семантики -->
+          <p>
+            Телефон: +79777777777 <br />
+            Почта: mail@mail.ru <br />
+          </p>
+        </section>
+      </main>
+      <footer class="footer">
+        <!-- Было: <div class="footer"> -->
+        <p>Футер</p>
+        <!-- Добавили параграф для семантики -->
+      </footer>
+    </div>
   </body>
 </html>

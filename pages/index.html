@@ -5,74 +5,109 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
   </head>
   <body>
-    <header>
-      <div class="nav">
-        <ul class="nav_list">
-          <li class="nav_item">
-            <a class="nav-link" href="index.html">Главная</a>
+    <!-- Изменение: Заменили div на семантические теги -->
+    <div class="page-container">
+      <header class="header">
+        <!-- Было: <div class="header"> -->
+        <h1>Хэдер</h1>
+        <!-- Добавили заголовок для семантики -->
+      </header>
+      <nav class="nav">
+        <!-- Было: <div class="nav"> -->
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/index.html">Главная</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="news.html">Новости</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/news.html">Новости</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="practice.html">Практики</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/practice.html">Практики</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="goods.html">Продукты</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/goods.html">Товары</a>
           </li>
-          <li class="nav_item">
-            <a class="nav-link" href="contacts.html">Контакты</a>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/contacts.html">Контакты</a>
           </li>
         </ul>
-      </div>
-    </header>
-    <main>
-      <div class="content">
-        <h1 class="profile-header">Информация об авторе</h1>
-        <img
-          class="profile-photo"
-          src="../assets/my_photo.jpg"
-          alt="Фото автора"
-          width="200"
-          height="250"
-        />
-        <p class="profile-name">Харций Полина Игоревна</p>
-        <p class="profile-group">ЭФБО-16-24</p>
-        <p class="about-me">
-          Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано
-          ударила в голову. В четыре активно ругался. Потом школа, форма, драки,
-          клей. Так я становился сильней. Воровал деньги в раздевалке.
-        </p>
-        <ul>
-          <li>Навык 1</li>
-          <li>Навык 1</li>
-          <li>Навык 1</li>
-          <li>Навык 1</li>
-        </ul>
-      </div>
-      <div class="expirience">
-        <div class="exp">
-          <h1>Работа волшебником</h1>
+      </nav>
+      <main class="content">
+        <!-- Было: <div class="content"> -->
+        <article class="profile-header">
+          <!-- Было: <div class="profileheader"> -->
+          <h1 class="profile-title">Информация об авторе</h1>
+          <img
+            class="profile-photo"
+            src="../assets/my_photo.jpg"
+            alt="Фото автора"
+            width="200"
+            height="250"
+          />
+          <h2 class="profile-name">Харций Полина Игоревна</h2>
+          <p class="profile-group">ЭФБО-16-24</p>
+        </article>
+        <section class="about-me">
+          <!-- Было: <div class="about-me"> -->
+          <h2>Обо мне</h2>
+          <!-- Добавили заголовок для семантики -->
           <p>
-            Обучилась в хогвартсе и работала на пол ставки преподавателем там,
-            можно сказать круто получалось. Спасибо за внимание
+            Обо мне: Я родился в Москве в 70-м на краю города. Глупость рано
+            ударила в голову. В четыре активно ругался. Потом школа, форма,
+            драки, клей. Так я становился сильней. Воровал деньги в раздевалке.
           </p>
-        </div>
-        <div class="exp">
-          <h1>Работа в МИРЭА</h1>
-          <p>
-            Вообще классный эксприенс, учусь и работаю в одном месте, только
-            волшебной палочкой нельзя пользоваться, перед маглами спалиться
-            нельзя
-          </p>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <p>footer</p>
-    </footer>
+        </section>
+        <section class="skills-container">
+          <!-- Было: <div class="skills container"> -->
+          <h2>Мои навыки</h2>
+          <!-- Добавили заголовок для семантики -->
+          <div class="skills-grid">
+            <!-- Обертка для Grid -->
+            <div class="skill-tag">Навык 1</div>
+            <div class="skill-tag">Навык 2</div>
+            <div class="skill-tag">Навык 3</div>
+            <div class="skill-tag">Навык 4</div>
+          </div>
+        </section>
+        <section class="experience-section">
+          <!-- Было: <div class="experience-section"> -->
+          <h2 class="section-title">Мой опыт работы</h2>
+          <div class="experience-grid">
+            <!-- Обертка для Grid -->
+            <article class="experience-card">
+              <!-- Было: <div 
+class="experience-card"> -->
+              <h3 class="experience-title">Опыт 1</h3>
+              <p class="experience-desc">
+                Обучилась в хогвартсе и работала на пол ставки преподавателем
+                там, можно сказать круто получалось. Спасибо за внимание
+              </p>
+            </article>
+
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 2</h3>
+              <p class="experience-desc">
+                Вообще классный эксприенс, учусь и работаю в одном месте, только
+                волшебной палочкой нельзя пользоваться, перед маглами спалиться
+                нельзя
+              </p>
+            </article>
+
+            <article class="experience-card">
+              <h3 class="experience-title">Опыт 3</h3>
+              <p class="experience-desc">Работал рэпером. Читал и пел.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <!-- Было: <div class="footer"> -->
+        <p>Футер</p>
+        <!-- Добавили параграф для семантики -->
+      </footer>
+    </div>
   </body>
 </html>

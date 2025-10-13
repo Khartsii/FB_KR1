@@ -1,0 +1,344 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+    min-height: 100vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+} 
+/* ===== КОНТЕЙНЕР СТРАНИЦЫ ===== */
+ /* ИЗМЕНЕНИЕ: Добавили CSS Grid для основного макета страницы */
+.page-container { 
+    margin: 0 auto; 
+    background: white; 
+    min-height: 100vh; 
+    box-shadow: 0 0 30px rgba(0,0,0,0.1); 
+    /* Новое: Сеточный макет для семантических областей */ 
+    display: grid; 
+    grid-template-rows: auto auto 1fr auto; 
+    grid-template-areas:  
+    "header" 
+    "nav" 
+    "main" 
+    "footer"; 
+    max-width: 1200px; 
+}
+
+/* ===== ШАПКА ===== */
+.header { 
+    color: white; 
+    text-align: center; 
+    padding: 30px; 
+    font-size: 28px; 
+    font-weight: 300; 
+    letter-spacing: 2px; 
+    /* Новое: Привязка к области сетки */ 
+    grid-area: header; 
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
+} 
+/* ===== НАВИГАЦИЯ ===== */
+.nav { 
+    padding: 20px 0; 
+    /* Новое: Привязка к области сетки */ 
+    grid-area: nav; 
+    background: #2c3e50; 
+} 
+.nav-list { 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; /*отступы между элементами в блоке*/
+    list-style: none; 
+} 
+.nav-item { 
+    margin: 0; 
+} 
+.nav-link { 
+    text-decoration: none; 
+    padding: 12px 25px; 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
+    font-weight: 500; 
+    color: white; 
+} 
+.nav-link:hover { 
+    transform: translateY(-2px); 
+    background: rgba(255,255,255,0.1); 
+} 
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+ /* ИЗМЕНЕНИЕ: Заменили .content на main для семантики */
+main.content { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    /* Новое: Привязка к области сетки */ 
+    grid-area: main; 
+    padding: 40px; 
+} 
+/* ===== ГЛАВНАЯ СТРАНИЦА ===== */
+.profile-header { 
+    margin-bottom: 40px; 
+    text-align: center; 
+} 
+.profile-title { 
+    color: #2c3e50; 
+    margin-bottom: 10px; 
+    font-weight: 300; 
+    font-size: 32px; 
+} 
+.profile-photo { 
+    height: 280px; 
+    border-radius: 15px; 
+    object-fit: cover; 
+    margin: 20px auto; 
+    border: 4px solid #667eea; 
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3); 
+    width: 220px; 
+} 
+.profile-name { 
+    color: #2c3e50; 
+    margin: 10px 0; 
+    font-weight: 500; 
+    font-size: 24px; 
+} 
+.profile-group { 
+    color: #7f8c8d; 
+    margin: 5px 0; 
+    font-size: 18px; 
+} 
+.about-me { 
+    padding: 25px; 
+    border-radius: 15px; 
+    margin: 30px 0; 
+    border-left: 5px solid #667eea; 
+    font-size: 16px; 
+    line-height: 1.8; 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+} 
+/* ===== НАВЫКИ ===== */
+ /* ИЗМЕНЕНИЕ: Добавили CSS Grid для навыков */
+.skills-grid {
+    display: grid; 
+    gap: 15px; 
+    margin: 20px 0; 
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+} 
+.skill-tag { 
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
+    padding: 12px 25px; 
+    border-radius: 25px; 
+    font-weight: 600; 
+    font-size: 14px; 
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); 
+    transition: all 0.3s ease; 
+    text-align: center; 
+    color: white; 
+} 
+.skill-tag:hover { 
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); 
+    transform: translateY(-3px); 
+} 
+/* ===== ОПЫТ РАБОТЫ ===== */
+ .experience-section { 
+    margin-top: 50px; 
+} 
+.section-title { 
+    color: #2c3e50; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    font-weight: 300; 
+    font-size: 28px; 
+} 
+/* ИЗМЕНЕНИЕ: Добавили CSS Grid для карточек опыта */
+ .experience-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    display: grid; 
+} 
+.experience-card { 
+    padding: 25px; 
+    border-radius: 12px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+    border-left: 4px solid #667eea; 
+    transition: transform 0.3s ease; 
+    background: white; 
+} 
+.experience-card:hover { 
+    transform: translateX(5px);
+} 
+.experience-title { 
+    color: #2c3e50; 
+    margin: 0 0 10px 0; 
+    font-weight: 600; 
+    font-size: 20px; 
+} 
+.experience-desc { 
+    line-height: 1.6; 
+    margin: 0; 
+    color: #7f8c8d; 
+} 
+/* ===== НОВОСТИ ===== */
+ .news-container { 
+    gap: 25px; 
+    display: grid; 
+} 
+.news-card { 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+    border-left: 4px solid #667eea; 
+    background: white; 
+} 
+.news-title { 
+    color: #2c3e50; 
+    margin: 0 0 10px 0; 
+    font-weight: 600; 
+    font-size: 24px; 
+} 
+.news-meta { 
+    font-size: 14px; 
+    margin: 0 0 15px 0; 
+    color: #95a5a6; 
+} 
+.news-text { 
+    line-height: 1.7; 
+    margin: 0; 
+    color: #34495e; 
+} 
+/* ===== ТОВАРЫ ===== */
+ .products-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    margin-top: 30px;
+    display: grid; 
+ } 
+.product-card { 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease; 
+    background: white; 
+} 
+.product-card:hover { 
+    transform: translateY(-5px); 
+} 
+.product-image { 
+    height: 250px; 
+    border-radius: 10px; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    border: 3px solid #f8f9fa; 
+    width: 200px; 
+} 
+.product-name { 
+    color: #2c3e50; 
+    margin: 10px 0; 
+    font-weight: 600; 
+    font-size: 18px; 
+} 
+.product-price { 
+    color: #e74c3c; 
+    font-weight: 700; 
+    margin: 5px 0; 
+    font-size: 20px; 
+} 
+/* ===== КОНТАКТЫ ===== */
+ .contacts-container { 
+    text-align: center; 
+} 
+.contact-info { 
+    padding: 25px; 
+    margin: 20px 0; 
+    border-radius: 15px; 
+    font-size: 18px; 
+    color: #2c3e50; 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+} 
+.contact-button { 
+    color: white; 
+    border: none; 
+    padding: 15px 40px; 
+    font-size: 16px; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    font-weight: 600; 
+    transition: all 0.3s ease; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+} 
+.contact-button:hover { 
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4); 
+    transform: translateY(-2px); 
+} 
+/* ===== ФУТЕР ===== */
+ .footer { 
+     color: white; 
+     text-align: center; 
+     padding: 30px; 
+     margin-top: 50px; 
+     /* Новое: Привязка к области сетки */ 
+     grid-area: footer; 
+     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); 
+} 
+/* ===== АДАПТИВНОСТЬ ===== */
+ /* Новое: Медиа-запросы для мобильных устройств */
+ @media (max-width: 768px) { 
+    .nav-list { 
+        gap: 10px; 
+        flex-direction: column; 
+    } 
+    .skills-grid { 
+        grid-template-columns: 1fr; 
+    } 
+    .experience-grid { 
+        grid-template-columns: 1fr; 
+    } 
+    main.content { 
+        padding: 20px; 
+    } 
+}
+
+
+/*СТРАНИЦА НОВОСТЕЙ*/
+.news {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px;
+    flex-wrap: wrap;
+}
+
+.new {
+    width: 360px;
+    box-shadow: 5px 20px 50px 0px #1070B133;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+/*СТРАНИЦА ТОВАРОВ*/
+.goods {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 85px;
+    flex-wrap: wrap;
+}
+
+.good {
+    width: 360px;
+    box-shadow: 5px 20px 50px 0px #1070B133;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.good img {
+    width: 200px;
+}
+
+/*СТРАНИЦА КОНТАКТОВ*/
+.main-contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
